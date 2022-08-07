@@ -1,0 +1,9 @@
+{
+  "name": "makhsam/easy-print-pdf",
+  "type": "project",
+  "description": "This is page generator for multi-page printing PDF documents.",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.6"
+  }
+}
