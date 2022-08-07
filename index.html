@@ -123,17 +123,20 @@
 
 
 
-                var page, counter = 1;
-                for (page = first_page; page <= last_page; page++) {
+                var page, next_page, counter = 1;
 
-                    if (counter == 5) {
+                for (page = first_page; page <= last_page; page += 2) {
+
+                    next_page = page + 1;
+
+                    if (counter == 3) {
                         counter = 1;
                     }
 
-                    if (counter == 1 || counter == 2) {
-                        front_pages.push(page);
+                    if (counter == 1) {
+                        front_pages.push(page + '-' + next_page);
                     } else {
-                        back_pages.push(page);
+                        back_pages.push(page + '-' + next_page);
                     }
 
                     // console.log('COUNTER: ' + counter + '; PAGE: ' + page);
